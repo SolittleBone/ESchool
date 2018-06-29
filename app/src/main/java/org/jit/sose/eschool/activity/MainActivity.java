@@ -12,7 +12,12 @@ import org.androidannotations.annotations.ViewById;
 import org.jit.sose.eschool.R;
 import org.jit.sose.eschool.controller.MainFragmentController;
 
-
+/**
+ * Author: chenmin
+ * Date: 2018/6/23
+ * GITHUB: https://github.com/Lulululuya/ESchool
+ * Description: 程序的主界面，主要负责App的Fragment视图绑定
+ */
 @EActivity(R.layout.main)
 public class MainActivity extends AppCompatActivity {
 
@@ -20,56 +25,26 @@ public class MainActivity extends AppCompatActivity {
     // 实例化fragmentcontroller（fragment的管理类）
     private MainFragmentController mainFragmentController;
 
-    //private AbTitleBar mAbtitleBar;         // 顶部标题栏控件
-    //private AbBottomBar mAbBottomBar;       // 底部标题栏控件
-
-    //private RadioGroup rb_bottomBar;
-
-
-
+    //log的TAG
     private static final String TAG = "MainActivity";
 
+    //绑定底部导航栏的RadioGroup
     @ViewById(R.id.rg_bottomBar)
     RadioGroup rb_bottomBar;
 
-
-
+    //界面初始化所调用的方法
     @AfterViews
     void showMain(){
 
-        //initWidget();                                 //绑定控件
-        //initMainTitle();                              //初始化顶部标题栏
-        initFragment();                                 //初始化底部导航栏的fragment
+        initFragment();                   //初始化底部导航栏的fragment
     }
 
-    void initWidget(){
-        rb_bottomBar = (RadioGroup) findViewById(R.id.rg_bottomBar);
-    }
-
-    //初始化主标题栏
-/*    void initMainTitle(){
-        mAbtitleBar = this.getTitleBar();
-        mAbtitleBar.setTitleText(R.string.app_name);
-        mAbtitleBar.setLogo(R.drawable.button_selector_back);
-        mAbtitleBar.setTitleBarBackground(R.drawable.top_bg);
-        mAbtitleBar.setTitleTextMargin(10, 0, 0, 0);
-        mAbtitleBar.setLogoLine(R.drawable.line);
-    }*/
-
-    //初始化副标题栏
-/*    void initBottomBar(){
-        mAbBottomBar = this.getBottomBar();
-        mAbBottomBar.setVisibility(View.VISIBLE);
-        View view = mInflater.inflate(R.layout.bottom_bar, null);
-        Button searchBtn = (Button) view.findViewById(R.id.rb_leave);
-        Button selectBtn = (Button) view.findViewById(R.id.rb_person);
-        mAbBottomBar.setBottomView(view);
-    }*/
 
     //初始化底部导航栏显示的按钮（通过RadioGroup来绑定Fragment）
     void initFragment(){
         mainFragmentController = MainFragmentController.getInstance(this, R.id.content);
         mainFragmentController.showFragment(0);
+        //RadioGroup的点击事件
         rb_bottomBar.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
@@ -97,9 +72,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-
-
 
 
     //解决fragment残留的视图问题

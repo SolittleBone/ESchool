@@ -3,7 +3,7 @@ package org.jit.sose.eschool.config;
 /**
  * Author: chenmin
  * Date: 2018/6/23
- * GITHUB: https://github.com/JKchenmin/
+ * GITHUB: https://github.com/Lulululuya/ESchool
  * Description: 参数管理的常量类
  */
 

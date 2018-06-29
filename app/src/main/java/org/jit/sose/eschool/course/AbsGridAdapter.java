@@ -13,8 +13,10 @@ import org.jit.sose.eschool.R;
 
 
 /**
- * Created by wan on 2016/10/16.
- * GridView的适配器
+ * Author: dongdongdong
+ * Date: 2018/6/23
+ * GITHUB: https://github.com/Lulululuya/ESchool
+ * Description: 课程表的GridView的适配器
  */
 public class AbsGridAdapter extends BaseAdapter {
 

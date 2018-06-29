@@ -25,7 +25,7 @@ import static org.jit.sose.eschool.config.Parameter.SHAREDPREFERENCE_NAME;
 /**
  * Author: chenlu
  * Date: 2018/6/23
- * GITHUB: hhttps://github.com/Lulululuya/ESchool
+ * GITHUB: https://github.com/Lulululuya/ESchool
  * Description: 处理用户登录及注册的activity
  */
 @EActivity(R.layout.login)              //绑定到login.xml的视图界面

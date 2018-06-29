@@ -6,9 +6,12 @@ import android.util.AttributeSet;
 import android.widget.ListView;
 import android.widget.TableLayout;
 
+
 /**
- * Created by wan on 2016/10/12.
- * 用来显示课程表的自定义View
+ * Author: dongdongdong
+ * Date: 2018/6/23
+ * GITHUB: https://github.com/Lulululuya/ESchool
+ * Description: 用来显示课程表的自定义View
  */
 public class CourceDetail extends TableLayout {
 

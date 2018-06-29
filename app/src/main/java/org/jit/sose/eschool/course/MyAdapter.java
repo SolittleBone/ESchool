@@ -13,9 +13,13 @@ import org.jit.sose.eschool.R;
 import java.util.List;
 
 
+
+
 /**
- * Created by wan on 2016/10/13.
- * gridView的适配器
+ * Author: dongdongdong
+ * Date: 2018/6/23
+ * GITHUB: https://github.com/Lulululuya/ESchool
+ * Description: 用来显示课程表的自定义View
  */
 public class MyAdapter extends BaseAdapter {
 

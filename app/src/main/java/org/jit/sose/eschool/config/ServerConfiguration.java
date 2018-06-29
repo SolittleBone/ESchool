@@ -1,9 +1,12 @@
 package org.jit.sose.eschool.config;
 
-/**
- * Author chenmin * 这是客户端与服务器端通信的配置信息。
- */
 
+/**
+ * Author: chenmin
+ * Date: 2018/6/23
+ * GITHUB: https://github.com/Lulululuya/ESchool
+ * Description: 服务器的网络配置
+ */
 public class ServerConfiguration {
     public static final String IP = "http://10.0.2.2";                  //服务器地址
 
